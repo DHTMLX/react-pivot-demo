@@ -138,7 +138,7 @@ body,
 
 .dhx_sample-container__sidebar {
   width: 20%;
-  margin-left: 20px;
+  margin: 20px 0 0 20px;
   border: 1px solid #dfdfdf;
   padding: 10px;
   height: 600px;
