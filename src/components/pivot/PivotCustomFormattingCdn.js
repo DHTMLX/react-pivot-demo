@@ -5,25 +5,30 @@ import data from "../../dataset.json";
 const fields = {
   rows: ["form", "name"],
   columns: ["year"],
-  values: [{id: "oil", method: "count"}, {id: "gdp", method: "sum"}],
+  values: [
+    { id: "oil", method: "count" },
+    { id: "gdp", method: "sum" },
+  ],
 };
 
 const fieldList = [
-  {id: "name", label: "Name"},
-  {id: "year", label: "Year"},
-  {id: "continent", label: "Continent"},
-  {id: "form", label: "Form"},
+  { id: "name", label: "Name" },
+  { id: "year", label: "Year" },
+  { id: "continent", label: "Continent" },
+  { id: "form", label: "Form" },
   {
-    id: "gdp", label: "GDP", cellTemplate: function(val) {
+    id: "gdp",
+    label: "GDP",
+    cellTemplate: function (val) {
       return "&euro; " + val;
     },
   },
-  {id: "oil", label: "Oil"},
-  {id: "balance", label: "Balance" },
-  {id: "when", label: "When", type: "date", format: "%d/%m/%Y"},
+  { id: "oil", label: "Oil" },
+  { id: "balance", label: "Balance" },
+  { id: "when", label: "When", type: "date", format: "%d/%m/%Y" },
 ];
 
-const customFormat = function(cellValue, method) {
+const customFormat = function (cellValue, method) {
   if (method === "count") {
     return cellValue;
   }
@@ -38,10 +43,7 @@ class PivotCustomFormattingCdn extends Component {
   constructor(props) {
     super(props);
 
-    this.ready = fromCDN([
-      "https://cdn.dhtmlx.com/pivot/pro/edge/pivot.js",
-      "https://cdn.dhtmlx.com/pivot/pro/edge/pivot.css",
-    ]);
+    this.ready = fromCDN(["https://cdn.dhtmlx.com/pivot/pro/edge/pivot.js", "https://cdn.dhtmlx.com/pivot/pro/edge/pivot.css"]);
   }
 
   componentDidMount() {
@@ -52,7 +54,7 @@ class PivotCustomFormattingCdn extends Component {
         fields,
         fieldList,
         customFormat,
-        layout
+        layout,
       });
     });
   }
@@ -62,9 +64,7 @@ class PivotCustomFormattingCdn extends Component {
   }
 
   render() {
-    return (
-      <div className="dhx_sample-container__widget" id="pivot"></div>
-    );
+    return <div className="dhx_sample-container__widget" id="pivot"></div>;
   }
 }
 

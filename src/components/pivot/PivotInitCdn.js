@@ -5,28 +5,28 @@ import data from "../../dataset.json";
 const fields = {
   rows: ["form", "name"],
   columns: ["year"],
-  values: [{id: "oil", method: "count"}, {id: "oil", method: "sum"}],
+  values: [
+    { id: "oil", method: "count" },
+    { id: "oil", method: "sum" },
+  ],
 };
 
 const fieldList = [
-  {id: "name", label: "Name"},
-  {id: "year", label: "Year"},
-  {id: "continent", label: "Continent"},
-  {id: "form", label: "Form"},
-  {id: "gdp", label: "GDP"},
-  {id: "oil", label: "Oil"},
-  {id: "balance", label: "Balance"},
-  {id: "when", label: "When", type: "date", format: "%d/%m/%Y"},
+  { id: "name", label: "Name" },
+  { id: "year", label: "Year" },
+  { id: "continent", label: "Continent" },
+  { id: "form", label: "Form" },
+  { id: "gdp", label: "GDP" },
+  { id: "oil", label: "Oil" },
+  { id: "balance", label: "Balance" },
+  { id: "when", label: "When", type: "date", format: "%d/%m/%Y" },
 ];
 
 class PivotInitCdn extends Component {
   constructor(props) {
     super(props);
 
-    this.ready = fromCDN([
-      "https://cdn.dhtmlx.com/pivot/pro/edge/pivot.js",
-      "https://cdn.dhtmlx.com/pivot/pro/edge/pivot.css",
-    ]);
+    this.ready = fromCDN(["https://cdn.dhtmlx.com/pivot/pro/edge/pivot.js", "https://cdn.dhtmlx.com/pivot/pro/edge/pivot.css"]);
   }
 
   componentDidMount() {
@@ -35,7 +35,7 @@ class PivotInitCdn extends Component {
       this.pivot = new dhx.Pivot("pivot", {
         data,
         fields,
-        fieldList
+        fieldList,
       });
     });
   }
@@ -45,9 +45,7 @@ class PivotInitCdn extends Component {
   }
 
   render() {
-    return (
-      <div className="dhx_sample-container__widget" id="pivot"></div>
-    );
+    return <div className="dhx_sample-container__widget" id="pivot"></div>;
   }
 }
 

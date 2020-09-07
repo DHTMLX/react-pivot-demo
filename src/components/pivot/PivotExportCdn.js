@@ -4,8 +4,11 @@ import data from "../../dataset.json";
 
 const fields = {
   rows: ["form", "year"],
-  columns: [{"id": "when", "group": "dateByQuarter"}],
-  values: [{id: "oil", method: "max"}, {id: "oil", method: "min"}],
+  columns: [{ id: "when", group: "dateByQuarter" }],
+  values: [
+    { id: "oil", method: "max" },
+    { id: "oil", method: "min" },
+  ],
 };
 
 const mark = {
@@ -14,24 +17,21 @@ const mark = {
 };
 
 const fieldList = [
-  {id: "name", label: "Name"},
-  {id: "year", label: "Year"},
-  {id: "continent", label: "Continent"},
-  {id: "form", label: "Form"},
-  {id: "gdp", label: "GDP"},
-  {id: "oil", label: "Oil"},
-  {id: "balance", label: "Balance"},
-  {id: "when", label: "When", type: "date", format: "%d/%m/%Y"},
+  { id: "name", label: "Name" },
+  { id: "year", label: "Year" },
+  { id: "continent", label: "Continent" },
+  { id: "form", label: "Form" },
+  { id: "gdp", label: "GDP" },
+  { id: "oil", label: "Oil" },
+  { id: "balance", label: "Balance" },
+  { id: "when", label: "When", type: "date", format: "%d/%m/%Y" },
 ];
 
 class PivotExportCdn extends Component {
   constructor(props) {
     super(props);
 
-    this.ready = fromCDN([
-      "https://cdn.dhtmlx.com/pivot/pro/edge/pivot.js",
-      "https://cdn.dhtmlx.com/pivot/pro/edge/pivot.css",
-    ]);
+    this.ready = fromCDN(["https://cdn.dhtmlx.com/pivot/pro/edge/pivot.js", "https://cdn.dhtmlx.com/pivot/pro/edge/pivot.css"]);
   }
 
   componentDidMount() {
@@ -41,7 +41,7 @@ class PivotExportCdn extends Component {
         data,
         fields,
         fieldList,
-        mark
+        mark,
       });
     });
   }
@@ -63,10 +63,14 @@ class PivotExportCdn extends Component {
 
   render() {
     return (
-      <div className="dhx-container_inner export">
+      <div className="dhx-container_inner">
         <section className="dhx_sample-controls">
-          <button className="dhx_sample-btn dhx_sample-btn--flat" onClick={() => this.runExport('xlsx')}>Export xlsx</button>
-          <button className="dhx_sample-btn dhx_sample-btn--flat" onClick={() => this.runExport('csv')}>Export csv</button>
+          <button className="dhx_sample-btn dhx_sample-btn--flat" onClick={() => this.runExport("xlsx")}>
+            Export xlsx
+          </button>
+          <button className="dhx_sample-btn dhx_sample-btn--flat" onClick={() => this.runExport("csv")}>
+            Export csv
+          </button>
         </section>
         <div className="dhx_sample-container__widget" id="pivot"></div>
       </div>

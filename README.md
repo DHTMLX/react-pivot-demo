@@ -7,6 +7,16 @@
 
 # DHTMLX Pivot + React
 
+### Development server
+
+To run the app in the development mode, run `npm storybook` in the project directory.
+Open [http://localhost:6006](http://localhost:6006) to view it in the browser.
+
+## Useful links
+
+- [Online  documentation](https://docs.dhtmlx.com/pivot/index.html)
+- [Support forum](https://forum.dhtmlx.com/c/widgets/pivot)
+
 ## Follow us
 
 Star our GitHub repo :star:
