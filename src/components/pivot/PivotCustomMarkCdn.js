@@ -4,11 +4,14 @@ import data from "../../dataset.json";
 
 const fields = {
   rows: ["form", "year"],
-  columns: [{"id": "when", "group": "dateByQuarter"}],
-  values: [{id: "oil", method: "max"}, {id: "oil", method: "min"}],
+  columns: [{ id: "when", group: "dateByQuarter" }],
+  values: [
+    { id: "oil", method: "max" },
+    { id: "oil", method: "min" },
+  ],
 };
 
-const mark = function(cell, columnData, row, column) {
+const mark = function (cell, columnData, _row, column) {
   if (column.method === "max") {
     var max = Math.max.apply(null, columnData);
     if (max === parseFloat(cell)) {
@@ -23,24 +26,21 @@ const mark = function(cell, columnData, row, column) {
 };
 
 const fieldList = [
-  {id: "name", label: "Name"},
-  {id: "year", label: "Year"},
-  {id: "continent", label: "Continent"},
-  {id: "form", label: "Form"},
-  {id: "gdp", label: "GDP"},
-  {id: "oil", label: "Oil"},
-  {id: "balance", label: "Balance"},
-  {id: "when", label: "When", type: "date", format: "%d/%m/%Y"},
+  { id: "name", label: "Name" },
+  { id: "year", label: "Year" },
+  { id: "continent", label: "Continent" },
+  { id: "form", label: "Form" },
+  { id: "gdp", label: "GDP" },
+  { id: "oil", label: "Oil" },
+  { id: "balance", label: "Balance" },
+  { id: "when", label: "When", type: "date", format: "%d/%m/%Y" },
 ];
 
 class PivotCustomMarkCdn extends Component {
   constructor(props) {
     super(props);
 
-    this.ready = fromCDN([
-      "https://cdn.dhtmlx.com/pivot/pro/edge/pivot.js",
-      "https://cdn.dhtmlx.com/pivot/pro/edge/pivot.css",
-    ]);
+    this.ready = fromCDN(["https://cdn.dhtmlx.com/pivot/pro/edge/pivot.js", "https://cdn.dhtmlx.com/pivot/pro/edge/pivot.css"]);
   }
 
   componentDidMount() {
@@ -50,7 +50,7 @@ class PivotCustomMarkCdn extends Component {
         data,
         fields,
         fieldList,
-        mark
+        mark,
       });
     });
   }
@@ -60,9 +60,7 @@ class PivotCustomMarkCdn extends Component {
   }
 
   render() {
-    return (
-      <div className="dhx_sample-container__widget custom_mark" id="pivot"></div>
-    );
+    return <div className="dhx_sample-container__widget" id="pivot"></div>;
   }
 }
 

@@ -11,6 +11,8 @@ import PivotFooterCdn from "../components/pivot/PivotFooterCdn";
 import PivotEventsCdn from "../components/pivot/PivotEventsCdn";
 import PivotGridEventsCdn from "../components/pivot/PivotGridEventsCdn";
 
+import "../index.css";
+
 storiesOf("Pivot", module)
   .add("Initialization", () => {
     return (
@@ -25,17 +27,12 @@ storiesOf("Pivot", module)
             Source code
           </a>
           <div>
-            Check documentation:
-            <a
-              href="https://docs.dhtmlx.com/pivot/guides__initialization.html#initializingpivot"
-              target="_blank"
-            >
+            Check documentation: &nbsp;
+            <a href="https://docs.dhtmlx.com/pivot/guides__initialization.html#initializingpivot" target="_blank">
               Initialization.
             </a>
-            <a
-              href="https://docs.dhtmlx.com/pivot/guides__loading_data.html#loadinginlinedata"
-              target="_blank"
-            >
+            &nbsp;
+            <a href="https://docs.dhtmlx.com/pivot/guides__loading_data.html#loadinginlinedata" target="_blank">
               Loading Inline Data
             </a>
           </div>
@@ -57,11 +54,8 @@ storiesOf("Pivot", module)
             Source code
           </a>
           <div>
-            Check documentation:
-            <a
-              href="https://docs.dhtmlx.com/pivot/guides__loading_data.html#externaldataloading"
-              target="_blank"
-            >
+            Check documentation: &nbsp;
+            <a href="https://docs.dhtmlx.com/pivot/guides__loading_data.html#externaldataloading" target="_blank">
               External Data Loading
             </a>
           </div>
@@ -83,11 +77,8 @@ storiesOf("Pivot", module)
             Source code
           </a>
           <div>
-            Check documentation:
-            <a
-              href="https://docs.dhtmlx.com/pivot/guides__export.html"
-              target="_blank"
-            >
+            Check documentation: &nbsp;
+            <a href="https://docs.dhtmlx.com/pivot/guides__export.html" target="_blank">
               Exporting Pivot
             </a>
           </div>
@@ -109,11 +100,8 @@ storiesOf("Pivot", module)
             Source code
           </a>
           <div>
-            Check documentation:
-            <a
-              href="https://docs.dhtmlx.com/pivot/guides__loading_data.html#loadinginlinedata"
-              target="_blank"
-            >
+            Check documentation: &nbsp;
+            <a href="https://docs.dhtmlx.com/pivot/guides__loading_data.html#loadinginlinedata" target="_blank">
               Loading Inline Data
             </a>
           </div>
@@ -135,17 +123,12 @@ storiesOf("Pivot", module)
             Source code
           </a>
           <div>
-            Check documentation:
-            <a
-              href="https://docs.dhtmlx.com/pivot/api__pivot_setfields.html"
-              target="_blank"
-            >
+            Check documentation: &nbsp;
+            <a href="https://docs.dhtmlx.com/pivot/api__pivot_setfields.html" target="_blank">
               SetFields.
             </a>
-            <a
-              href="https://docs.dhtmlx.com/pivot/api__pivot_setdata.html"
-              target="_blank"
-            >
+            &nbsp;
+            <a href="https://docs.dhtmlx.com/pivot/api__pivot_setdata.html" target="_blank">
               SetData
             </a>
           </div>
@@ -167,17 +150,12 @@ storiesOf("Pivot", module)
             Source code
           </a>
           <div>
-            Check documentation:
-            <a
-              href="https://docs.dhtmlx.com/pivot/guides__customization.html#conditionalformattingofcells"
-              target="_blank"
-            >
+            Check documentation: &nbsp;
+            <a href="https://docs.dhtmlx.com/pivot/guides__customization.html#conditionalformattingofcells" target="_blank">
               Conditional Formatting of Cells.
             </a>
-            <a
-              href="https://docs.dhtmlx.com/pivot/api__pivot_mark_config.html"
-              target="_blank"
-            >
+            &nbsp;
+            <a href="https://docs.dhtmlx.com/pivot/api__pivot_mark_config.html" target="_blank">
               Mark
             </a>
           </div>
@@ -199,17 +177,12 @@ storiesOf("Pivot", module)
             Source code
           </a>
           <div>
-            Check documentation:
-            <a
-              href="https://docs.dhtmlx.com/pivot/guides__customization.html#customformatforcells"
-              target="_blank"
-            >
+            Check documentation: &nbsp;
+            <a href="https://docs.dhtmlx.com/pivot/guides__customization.html#customformatforcells" target="_blank">
               Custom Format for Cells.
             </a>
-            <a
-              href="https://docs.dhtmlx.com/pivot/api__pivot_customformat_config.html"
-              target="_blank"
-            >
+            &nbsp;
+            <a href="https://docs.dhtmlx.com/pivot/api__pivot_customformat_config.html" target="_blank">
               CustomFormat
             </a>
           </div>
@@ -231,11 +204,8 @@ storiesOf("Pivot", module)
             Source code
           </a>
           <div>
-            Check documentation:
-            <a
-              href="https://docs.dhtmlx.com/pivot/guides__configuration.html#totaloperationpercolumn"
-              target="_blank"
-            >
+            Check documentation: &nbsp;
+            <a href="https://docs.dhtmlx.com/pivot/guides__configuration.html#totaloperationpercolumn" target="_blank">
               Total Operation per Column
             </a>
           </div>
@@ -257,11 +227,8 @@ storiesOf("Pivot", module)
             Source code
           </a>
           <div>
-            Check documentation:
-            <a
-              href="https://docs.dhtmlx.com/pivot/api__refs__pivot_events.html"
-              target="_blank"
-            >
+            Check documentation: &nbsp;
+            <a href="https://docs.dhtmlx.com/pivot/api__refs__pivot_events.html" target="_blank">
               Events
             </a>
           </div>
@@ -283,11 +250,8 @@ storiesOf("Pivot", module)
             Source code
           </a>
           <div>
-            Check documentation:
-            <a
-              href="https://docs.dhtmlx.com/pivot/api__refs__grid_events.html"
-              target="_blank"
-            >
+            Check documentation: &nbsp;
+            <a href="https://docs.dhtmlx.com/pivot/api__refs__grid_events.html" target="_blank">
               Grid Events
             </a>
           </div>
@@ -295,4 +259,4 @@ storiesOf("Pivot", module)
         <PivotGridEventsCdn></PivotGridEventsCdn>
       </section>
     );
-  })
+  });

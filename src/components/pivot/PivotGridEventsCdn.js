@@ -5,18 +5,21 @@ import data from "../../dataset.json";
 const fields = {
   rows: ["form", "name"],
   columns: ["year"],
-  values: [{id: "oil", method: "count"}, {id: "oil", method: "sum"}],
+  values: [
+    { id: "oil", method: "count" },
+    { id: "oil", method: "sum" },
+  ],
 };
 
 const fieldList = [
-  {id: "name", label: "Name"},
-  {id: "year", label: "Year"},
-  {id: "continent", label: "Continent"},
-  {id: "form", label: "Form"},
-  {id: "gdp", label: "GDP"},
-  {id: "oil", label: "Oil"},
-  {id: "balance", label: "Balance"},
-  {id: "when", label: "When", type: "date", format: "%d/%m/%Y"},
+  { id: "name", label: "Name" },
+  { id: "year", label: "Year" },
+  { id: "continent", label: "Continent" },
+  { id: "form", label: "Form" },
+  { id: "gdp", label: "GDP" },
+  { id: "oil", label: "Oil" },
+  { id: "balance", label: "Balance" },
+  { id: "when", label: "When", type: "date", format: "%d/%m/%Y" },
 ];
 
 const layout = {
@@ -59,13 +62,10 @@ class PivotGridEventsCdn extends Component {
     super(props);
     this.state = {
       isEmpty: true,
-      events: []
-		};
+      events: [],
+    };
 
-    this.ready = fromCDN([
-      "https://cdn.dhtmlx.com/pivot/pro/edge/pivot.js",
-      "https://cdn.dhtmlx.com/pivot/pro/edge/pivot.css",
-    ]);
+    this.ready = fromCDN(["https://cdn.dhtmlx.com/pivot/pro/edge/pivot.js", "https://cdn.dhtmlx.com/pivot/pro/edge/pivot.css"]);
   }
 
   componentDidMount() {
@@ -75,13 +75,13 @@ class PivotGridEventsCdn extends Component {
         data,
         fields,
         fieldList,
-        layout
+        layout,
       });
 
-      eventsArray.forEach((event) => {
-				this.pivot.grid.events.on(event, (...args) => {
+      eventsArray.forEach(event => {
+        this.pivot.grid.events.on(event, (...args) => {
           args = args.map(item => JSON.stringify(item));
-          const eventItem = [{id: Math.random(), name: event, value: `${args}`}];
+          const eventItem = [{ id: Math.random(), name: event, value: `${args}` }];
           this.setState(state => {
             const events = state.events.concat(eventItem);
             return {
@@ -89,7 +89,7 @@ class PivotGridEventsCdn extends Component {
               isEmpty: false,
             };
           });
-				});
+        });
       });
     });
   }
@@ -101,29 +101,37 @@ class PivotGridEventsCdn extends Component {
   clearAll() {
     this.setState(state => ({
       events: [],
-      isEmpty: true
+      isEmpty: true,
     }));
   }
 
   render() {
     const isEmpty = this.state.isEmpty;
     return (
-      <div className="dhx-container_inner events">
+      <div className="dhx-container_inner">
+      <section className="dhx_sample-controls">
+        <button className="dhx_sample-btn dhx_sample-btn--flat" onClick={() => this.clearAll()}>
+          Clear events
+        </button>
+      </section>
+      <div className="dhx-events">
         <div className="dhx_sample-container__widget" id="pivot"></div>
         <div className="dhx_sample-container__sidebar">
           <div className="events-list--element" style={isEmpty ? {} : { display: "none" }}>
             No events yet
           </div>
-          <div className="events-list--element dhx_sample-event" style={isEmpty ? { display: "none" } : {}}>
-            {this.state.events.map(item => (
-              <p key={item.id}>{item.name}: {item.value}</p>
+          <div className="events-list events-list-wrapper" style={isEmpty ? { display: "none" } : {}}>
+            {this.state.events.reverse().map(item => (
+              <div className="events-list--element" style={isEmpty ? { display: "none" } : {}}>
+                <p key={item.id}>
+                  {item.name}: {item.value}
+                </p>
+              </div>
             ))}
           </div>
         </div>
-        <section className="dhx_sample-controls">
-          <button className="dhx_sample-btn dhx_sample-btn--flat" onClick={() => this.clearAll()}>Clear events</button>
-        </section>
       </div>
+    </div>
     );
   }
 }
