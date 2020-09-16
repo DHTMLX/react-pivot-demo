@@ -33,8 +33,8 @@ From this file you'll learn how to integrate DHX [JavaScript pivot widget](https
 
 ## Useful links
 
+- [Download DHTMLX Pivot widget](https://dhtmlx.com/docs/products/dhtmlxPivot/download.shtml)
 - [Online  documentation](https://docs.dhtmlx.com/pivot/index.html)
-- [DHTMLX Pivot product page](https://dhtmlx.com/docs/products/dhtmlxPivot/)
 - [Support forum](https://forum.dhtmlx.com/c/widgets/pivot)
 
 ## Follow us
