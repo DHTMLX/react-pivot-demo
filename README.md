@@ -1,45 +1,41 @@
-<p align="center">
-	<a href="https://dhtmlx.github.io/react-pivot-demo/?path=/story/pivot--initialization">
-		<img src="https://dhtmlx.github.io/react-widgets/static/logo_r.svg" width="150" height="55">
-	</a>
-</p>
+# DHTMLX Pivot with React Demo
 
+[![dhtmlx.com](https://img.shields.io/badge/made%20by-DHTMLX-blue)](https://dhtmlx.com/)
 
-# DHTMLX Pivot + React
+![DHTMLX Pivot with React Demo](pivot.png)
 
-## How to run
-- Run `npm install`
-- Run `npm run storybook` in the project directory
-- Open [http://localhost:6006](http://localhost:6006) to view it in the browser.
+## How to start
 
-## Live demos
+### Online
 
-- [Initialization](https://dhtmlx.github.io/react-pivot-demo/?path=/story/pivot--initialization)
-- [Loading Data](https://dhtmlx.github.io/react-pivot-demo/?path=/story/pivot--loading-data)
-- [Export Data](https://dhtmlx.github.io/react-pivot-demo/?path=/story/pivot--export-data)
-- [Set Data](https://dhtmlx.github.io/react-pivot-demo/?path=/story/pivot--set-data)
-- [Structure Reload](https://dhtmlx.github.io/react-pivot-demo/?path=/story/pivot--structure-reload)
-- [Custom Mark](https://dhtmlx.github.io/react-pivot-demo/?path=/story/pivot--custom-mark)
-- [Custom Formatting](https://dhtmlx.github.io/react-pivot-demo/?path=/story/pivot--custom-formatting)
-- [Footer](https://dhtmlx.github.io/react-pivot-demo/?path=/story/pivot--footer)
-- [Events](https://dhtmlx.github.io/react-pivot-demo/?path=/story/pivot--events)
-- [Grid Events](https://dhtmlx.github.io/react-pivot-demo/?path=/story/pivot--grid-events)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/DHTMLX/react-pivot-demo)
 
+### On the local host
+
+Clone the repository or download files.
+
+```
+yarn
+yarn start
+```
+
+or
+
+```
+npm install
+npm run start
+```
 
 ## Useful links
 
-- [Online  documentation](https://docs.dhtmlx.com/pivot/index.html)
-- [Support forum](https://forum.dhtmlx.com/c/widgets/pivot)
+- [More demos about the DHTMLX Pivot functionality](https://snippet.dhtmlx.com/w2n1y9qx?tag=pivot)
+- [Technical support](https://forum.dhtmlx.com/c/pivot)
+- [Online  documentation](https://docs.dhtmlx.com/pivot/)
 
 ## Follow us
 
-Star our GitHub repo :star:
-
-Watch our tutorials on [YouTube](https://www.youtube.com/user/dhtmlx/videos) :eyes:
-
-Read us on [Medium](https://medium.com/@dhtmlx) :newspaper:
-
-Follow us on [Twitter](https://twitter.com/dhtmlx) :feet:
-
-Like our page on [Facebook](https://www.facebook.com/dhtmlx/) :thumbsup:
-
+- Star our GitHub repo :star:
+- Watch our tutorials on [YouTube](https://www.youtube.com/user/dhtmlx/videos) :eyes:
+- Read us on [Medium](https://dhtmlx.medium.com) :newspaper:
+- Follow us on [Twitter](https://twitter.com/dhtmlx) :feet:
+- Like our page on [Facebook](https://www.facebook.com/dhtmlx/) :thumbsup:
