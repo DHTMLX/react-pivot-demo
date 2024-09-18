@@ -18,6 +18,7 @@ export default function PivotComponent(props) {
             },
             columnShape: {
                 autoWidth: {
+                    auto: true,
                     columns: {
                         type: true,
                         title: true
