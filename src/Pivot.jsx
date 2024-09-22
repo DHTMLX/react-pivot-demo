@@ -10,41 +10,41 @@ export default function PivotComponent(props) {
 			fields: props.fields,
 			data: props.dataset,
 			headerShape: {
-                collapsible: true
-            },
-            tableShape: {
-                tree: true, // eslint-disable-next-line 
-                templates: ["profit", "sales"].reduce((acc, field) => (acc[field] = v => (v ? Math.ceil(v) : ""), acc), {})
-            },
-            columnShape: {
-                autoWidth: {
-                    auto: true,
-                    columns: {
-                        type: true,
-                        title: true
-                    },
-                    firstOnly: false
-                }
-            },
-            config: {
-                rows: ["state", "product_type"],
-                columns: ["product_line", "type"],
-                values: [
-                    {
-                        field: "profit",
-                        method: "sum"
-                    },
-                    {
-                        field: "sales",
-                        method: "sum"
-                    },
-                    {
-                        field: "date",
-                        method: "min"
-                    }
-                ]
-            }
-            // other configuration properties
+        collapsible: true
+      },
+      tableShape: {
+        tree: true, // eslint-disable-next-line 
+        templates: ["profit", "sales"].reduce((acc, field) => (acc[field] = v => (v ? Math.ceil(v) : ""), acc), {})
+      },
+      columnShape: {
+        autoWidth: {
+          auto: true,
+          columns: {
+            type: true,
+            title: true
+          },
+          firstOnly: false
+        }
+      },
+      config: {
+        rows: ["state", "product_type"],
+        columns: ["product_line", "type"],
+        values: [
+          {
+            field: "profit",
+            method: "sum"
+          },
+          {
+            field: "sales",
+            method: "sum"
+          },
+          {
+            field: "date",
+            method: "min"
+          }
+        ]
+      }
+      // other configuration properties
 		});
 
 		return () => {
